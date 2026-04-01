@@ -17,6 +17,7 @@ const row2 = [
   '/Images/canva.png',
   '/Images/figma.png',
   '/Images/github.png',
+  '/Images/jira.jpeg',
   '/Images/Postman.png',
 ];
 
