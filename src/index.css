@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Backgrounds */
+  --color-bg-main: #F3E8DF;
+  --color-bg-alt: #E8D1C5;
+
+  /* Text */
+  --color-text-main: #452829;
+  --color-text-muted: #57595B;
+
+  /* Primary / Accent */
+  --color-primary: #452829;
+  --color-primary-soft: #E8D1C5;
+  --color-accent: #57595B;
+
+  /* Surfaces / Borders */
+  --color-border-soft: rgba(87, 89, 91, 0.15);
+  --color-card-bg: rgba(243, 232, 223, 0.95);
+}
+
+::selection {
+  color: var(--color-bg-main);
+  background: rgba(69, 40, 41, 0.85); /* deep primary behind light text */
+}
