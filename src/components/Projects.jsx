@@ -4,6 +4,13 @@ import { cn } from '../utils/cn';
 
 const projects = [
   {
+    id: 'pixel64',
+    title: 'Pixel64',
+    tagline: 'A sleek chess website to play, learn, and sharpen your game.',
+    href: 'https://pixel64.vercel.app',
+    image: '/Images/pixel64.png',
+  },
+  {
     id: 'sahay',
     title: 'Sahay',
     tagline: 'Digital mental health & psychological support system.',
@@ -30,13 +37,6 @@ const projects = [
     tagline: 'A companion platform helping for metarnal health care',
     href: 'https://nuturenest.netlify.app/',
     image: '/Images/NurtureNest.png',
-  },
-  {
-    id: 'zero-hunger',
-    title: 'Zero Hunger',
-    tagline: 'Identifies nearby food banks, community kitchens, and donation centers.',
-    href: null,
-    image: '/Images/ZeroHunger.png',
   },
 ];
 

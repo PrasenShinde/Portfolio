@@ -21,13 +21,13 @@ const sectionVariants = {
 
 const childVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { 
-      duration: 0.6, 
-      ease: [0.65, 0.05, 0.36, 1] 
-    } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.65, 0.05, 0.36, 1]
+    }
   },
 };
 
@@ -44,11 +44,11 @@ function Footer() {
 
     const nameText = nameTextRef.current;
     const letters = nameText.querySelectorAll('.name-letter');
-    
+
     // Set initial state - letters start from bottom
-    gsap.set(letters, { 
-      y: 30, 
-      opacity: 0 
+    gsap.set(letters, {
+      y: 30,
+      opacity: 0
     });
 
     // Create scroll trigger - when footer bottom is 80vh from viewport bottom
@@ -101,24 +101,28 @@ function Footer() {
   ];
 
   const socialLinks = [
-    { 
-      name: 'Email', 
+    {
+      name: 'Email',
       url: 'mailto:prasenshinde8@gmail.com'
     },
-    { 
-      name: 'LinkedIn', 
+    {
+      name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/prasen-shinde-482666320'
     },
-    { 
-      name: 'Github', 
+    {
+      name: 'Github',
       url: 'https://github.com/PrasenShinde/'
+    },
+    {
+      name: 'X',
+      url: 'https://x.com/PrasenShinde'
     },
   ];
 
   return (
-    <footer 
-      id="contact" 
-      ref={footerRef} 
+    <footer
+      id="contact"
+      ref={footerRef}
       className="site-footer relative mt-20 overflow-hidden"
     >
       {/* Footer Content */}
@@ -131,7 +135,7 @@ function Footer() {
       >
         <div className="footer-container-aziz">
           {/* Left: Links & Socials */}
-          <motion.div 
+          <motion.div
             className="footer-left"
             variants={childVariants}
           >
@@ -176,7 +180,7 @@ function Footer() {
           </motion.div>
 
           {/* Right: Empty space for PRASEN text */}
-          <motion.div 
+          <motion.div
             className="footer-right"
             variants={childVariants}
           >
@@ -200,14 +204,14 @@ function Footer() {
             Let&apos;s build something great.
           </h2>
           <div className="footer-contact-buttons">
-            <a 
-              href="tel:+918237875696" 
+            <a
+              href="tel:+918237875696"
               className="footer-phone-button"
             >
               +91 8237875696
             </a>
-            <a 
-              href="mailto:prasenshinde8@gmail.com" 
+            <a
+              href="mailto:prasenshinde8@gmail.com"
               className="footer-email-button"
             >
               prasenshinde8@gmail.com

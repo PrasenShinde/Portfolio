@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
-import { Linkedin, Instagram, Github } from 'lucide-react';
+import { Linkedin, Instagram, Github, Twitter } from 'lucide-react';
 import BlurText from '../Reactbits/BlurText';
 
-const techChips = ['React', 'JavaScript', 'Node.js', 'Mongo', 'Framer Motion'];
+const techChips = ['React', 'JavaScript', 'Node.js', 'Mongo', 'React Native'];
 
 const containerVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -56,14 +56,14 @@ function Home() {
         setOverlayDone(true);
       }
     };
-    
+
     // Check immediately
     checkOverlay();
-    
+
     // Also listen for class changes
     const observer = new MutationObserver(checkOverlay);
     observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-    
+
     return () => observer.disconnect();
   }, []);
 
@@ -82,11 +82,11 @@ function Home() {
       onMouseEnter={() => setIsHoveringHero(true)}
       onMouseLeave={() => setIsHoveringHero(false)}
     >
-    <div className="pointer-events-none hidden md:flex flex-col items-center absolute left-8 lg:left-8 top-1/2 -translate-y-1/2 z-10">
-      <div className="w-1.5 h-1.5 rounded-full border border-brand-primary bg-brand-primary" />
-      <div className="w-px h-80 bg-brand-primary" />
-      <div className="w-1.5 h-1.5 rounded-full border border-brand-primary bg-brand-primary" />
-    </div>
+      <div className="pointer-events-none hidden md:flex flex-col items-center absolute left-8 lg:left-8 top-1/2 -translate-y-1/2 z-10">
+        <div className="w-1.5 h-1.5 rounded-full border border-brand-primary bg-brand-primary" />
+        <div className="w-px h-80 bg-brand-primary" />
+        <div className="w-1.5 h-1.5 rounded-full border border-brand-primary bg-brand-primary" />
+      </div>
 
 
       {/* Background blobs & overlay with subtle parallax */}
@@ -123,7 +123,7 @@ function Home() {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2.5, delay: 0.6, ease: [0.65, 0.05, 0.36, 1] }}
->
+        >
 
           <div className="relative rounded-3xl border border-brand-borderSoft bg-brand-cardBg/80 backdrop-blur-xl px-6 py-7 md:px-8 md:py-9 shadow-brand-soft">
 
@@ -150,7 +150,7 @@ function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45, ease: 'easeOut' }}
             >
-              A full-stack developer who loves learning, building, and improving. I focus on clean code, thoughtful design, and making experiences that genuinely feel good for people.
+              A Software developer who loves learning, building, and improving. I focus on clean code, thoughtful design, and making experiences that genuinely feel good for people.
             </motion.p>
 
             <div className="flex flex-col gap-4 md:gap-5">
@@ -184,14 +184,19 @@ function Home() {
                     label: 'LinkedIn',
                   },
                   {
-                    icon: Instagram,
-                    href: 'https://www.instagram.com/prasen_10?igsh=N2tkZWVxYXU4cHl3',
-                    label: 'Instagram',
-                  },
-                  {
                     icon: Github,
                     href: 'https://github.com/PrasenShinde/',
                     label: 'GitHub',
+                  },
+                  {
+                    icon: Twitter,
+                    href: 'https://x.com/PrasenShinde',
+                    label: 'X',
+                  },
+                  {
+                    icon: Instagram,
+                    href: 'https://www.instagram.com/prasen_10?igsh=N2tkZWVxYXU4cHl3',
+                    label: 'Instagram',
                   },
                 ].map(({ icon: Icon, href, label }) => (
                   <motion.a

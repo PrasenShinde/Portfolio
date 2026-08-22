@@ -9,6 +9,7 @@ const row1 = [
   '/Images/express.png',
   '/Images/mongodb.svg',
   '/Images/mysql.png',
+  '/Images/postgresql.png',
 ];
 
 const row2 = [
@@ -19,6 +20,8 @@ const row2 = [
   '/Images/github.png',
   '/Images/jira.jpeg',
   '/Images/Postman.png',
+  '/Images/render.png',
+  '/Images/vercel.png',
 ];
 
 const row3 = [
